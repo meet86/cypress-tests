@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import {userEmail, userPassword} from '../../../config'
+import {userEmail, userPassword} from '../../../../../config'
 
 context('User Registration', () => {
 
@@ -71,7 +71,7 @@ context('User Registration', () => {
 	})
 
 	// * Logins the User and redirects to the Dashboard.
-	it('shoud login and redirect to the dashboard', () => {
+	it('should login and redirect to the dashboard', () => {
 
 		// * Reload the page, to remove previous fake credentials.
 		cy.reload()
