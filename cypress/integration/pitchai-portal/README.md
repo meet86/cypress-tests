@@ -1,8 +1,8 @@
 # Test Files Metadata
 
 ### login.spec.js
-           
-      - Tests the Registration, Login, Logout functionalities
+
+           - Tests the Registration, Login, Logout functionalities
 
 ### f-billing-yearly.spec.js
    - Scenario
@@ -19,3 +19,17 @@
   - Scenario - After user got the monthly subscription, if user wants to change plan to yearly, then run this file.
   
           - Make sure to run  f-billing-monthly.spec.js first.
+### compare-spec.js
+
+           - Compare pitches between 2 players.
+
+### update-password.spec.js
+
+           - Tests the update password functionality
+           - 2 Tests
+               - One for the Correct Validation
+               - Second for the Invalid Validation
+             
+### update-profile.spec.js
+
+           - Update the Basic user information
