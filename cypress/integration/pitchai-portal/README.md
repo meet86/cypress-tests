@@ -1,7 +1,7 @@
 # Test Files Metadata
 
 ### login.spec.js
-    - Tests the Registration, Login, Logout functionalities
+           - Tests the Registration, Login, Logout functionalities
 
 ### f-billing-yearly.spec.js
    - Scenario
