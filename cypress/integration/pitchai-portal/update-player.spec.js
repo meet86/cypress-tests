@@ -105,5 +105,5 @@ context('Player Info Update', () => {
 		// * Update the info.
 		cy.get('.btn')
 			.click()
-	})
+	}) 
 })
