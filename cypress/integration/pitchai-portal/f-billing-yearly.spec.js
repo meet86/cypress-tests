@@ -1,3 +1,12 @@
+/*
+	****************************************************************************
+    * Scenario
+    * If user wants to directly get the Yearly subscription, rather than the... 
+    * first goes for montly and then goes for the yearly scenario.
+	****************************************************************************
+*/
+
+
 /// <reference types="cypress" />
 import '../../support/commands'
 import {coachEmail, coachPassword} from '../../../config'
@@ -38,8 +47,8 @@ context('User Billing', () => {
 		})
 	})
 
-	// * Subscribes to the Plan (Monthly).
-	it('should subscribe to the monthly subscription, skips if subscribed', () => {
+	// * Subscribes to the Plan (Yearly).
+	it('should subscribe to the yearly subscription', () => {
 
 		cy.get('button').contains('Upgrade Now').then(($upgradeBtn) => {
 			cy.wrap($upgradeBtn).click()
@@ -59,7 +68,7 @@ context('User Billing', () => {
 			expect(loc.href).to.contain('change-plan')
 		})
 		
-		cy.get(':nth-child(1) > .box-main > .box-plan > .btn').then(($monthlySelect) => {
+		cy.get(':nth-child(2) > .box-main > .box-plan > .btn').then(($monthlySelect) => {
 			cy.wrap($monthlySelect).click()
 		})
 		
@@ -99,7 +108,7 @@ context('User Billing', () => {
 				
 		cy.get('.action-button > .btn').then(($subscribeBtn) => {
 			cy.wrap($subscribeBtn).click()
-		})		
+		})
 
 	})
 
