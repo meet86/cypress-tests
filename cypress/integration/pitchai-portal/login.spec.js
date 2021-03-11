@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import {userEmail, userPassword} from '../../../../../config'
+import {userEmail, userPassword} from '../../../config'
 
 context('User Registration', () => {
 
