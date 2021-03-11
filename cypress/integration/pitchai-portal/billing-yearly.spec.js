@@ -1,5 +1,11 @@
 /*
     ********************************************************************
+	* Scenario
+	* After user gets the monthly subscription, and changes his mind to get...
+	* yearly subscription.
+
+	* To generate this scenario - follow the instruction.
+
     * This test file is supposed to be run after f-billing-monthly.spec.js
     ********************************************************************
 */
