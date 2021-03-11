@@ -1,5 +1,13 @@
 {
     "supportFile": "./cypress/support/index.js",
     "chromeWebSecurity": false,
-    "integrationFolder": "./cypress/integration"
+    "integrationFolder": "./cypress/integration",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+    }
 }

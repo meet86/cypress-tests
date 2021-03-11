@@ -4,6 +4,14 @@ import {userEmail, userPassword} from '../../../config'
 
 context('User Registration', () => {
 
+	beforeEach(() => {
+		cy.restoreLocalStorage()
+	})
+
+	afterEach(() => {
+		cy.saveLocalStorage() 
+	})
+
 	// * Opens the Application's Home page
 	it('Navigates to application home page', () => {
 		cy.log('Opening PitchAI-Portal Home Page')
@@ -103,6 +111,8 @@ context('User Registration', () => {
 	// * Logouts the current logged in user and Redirect to Home Page.
 	it('should logout the current logged in user', () => {
 
+		cy.wait(2000)
+
 		//* Click on the Dropdown menu, to get the logout option.
 		cy.get('.mat-menu-trigger')
 			.click()
@@ -111,6 +121,8 @@ context('User Registration', () => {
 		cy.get('.mat-menu-content > :nth-child(2)')
 			.contains('Log out')
 			.click()
+
+		cy.wait(2000)
 		
 		// * Check If you're successfully logged out or not by checking the URL.
 		cy.location().should((loc) => {
