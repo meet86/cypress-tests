@@ -66,4 +66,31 @@ context('Change Password', () => {
 		cy.get('form.ng-dirty > .action-button > .btn')
 			.click()
 	})
+
+	it('should not update the password', () => {
+
+		cy.reload()
+
+		cy.wait(5000)
+
+		// * Get the current password field.
+		cy.get('.field-4 > .floating-label > .form-control')
+			.type(userPassword)
+			.should('have.value', userPassword)
+
+		// * Get the new Password field.
+		cy.get('.field-5 > .floating-label > .form-control')
+			.type('userPassword123')
+			.should('have.value', 'userPassword123')
+		
+		// * Change password.
+		cy.get('form.ng-dirty > .action-button > .btn')
+			.click()
+
+		cy.wait(1000)
+
+		// * Expect the error
+		cy.get('.field-5 > .error-message > .ng-star-inserted')
+			.contains('must be')
+	})
 })
