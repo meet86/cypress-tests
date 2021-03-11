@@ -37,3 +37,7 @@
 ### update-player.spec.js
 
            - Updates the Player information such lbs, height, birthdatate etc.
+
+### compare-single.spec.js
+
+           - Compare pitches for the single player.
