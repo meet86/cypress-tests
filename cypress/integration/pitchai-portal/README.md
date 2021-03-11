@@ -19,7 +19,7 @@
   - Scenario - After user got the monthly subscription, if user wants to change plan to yearly, then run this file.
   
           - Make sure to run  f-billing-monthly.spec.js first.
-### compare-spec.js
+### compare.spec.js
 
            - Compare pitches between 2 players.
 
@@ -33,3 +33,7 @@
 ### update-profile.spec.js
 
            - Update the Basic user information
+
+### update-player.spec.js
+
+           - Updates the Player information such lbs, height, birthdatate etc.
